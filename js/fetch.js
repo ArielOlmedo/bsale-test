@@ -104,8 +104,14 @@ function imprimir(){
       .then(data=>data.json())
       .then(data=>{
         productos = data;
+
         document.getElementById('contenedor').innerHTML="";
-        listarBusquedas(productos);
+        if(!productos[0]){
+          console.log(data);
+          document.getElementById('contenedor').innerHTML="<h2>Producto no encontrado</h2>";
+        }
+        else
+          listarBusquedas(productos);
       });
   }
 }

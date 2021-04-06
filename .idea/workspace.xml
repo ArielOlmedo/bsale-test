@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40978e28-ec6a-43e5-80d5-52e428f95c5e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bSale-test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagentest.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/fetch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fetch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +51,16 @@
       <workItem from="1617579141994" duration="608000" />
       <workItem from="1617618040023" duration="614000" />
       <workItem from="1617649694148" duration="34816000" />
-      <workItem from="1617736234851" duration="4155000" />
+      <workItem from="1617736234851" duration="5834000" />
     </task>
+    <task id="LOCAL-00001" summary="buscador resposive">
+      <created>1617740562037</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617740562037</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,8 +70,14 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/bSale-test" />
     </ignored-roots>
+    <MESSAGE value="buscador resposive" />
+    <option name="LAST_COMMIT_MESSAGE" value="buscador resposive" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1617740561295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617740561295" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1617498733700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -76,6 +86,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617736334238" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1617740563962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617740563962" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1617520934175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
