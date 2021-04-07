@@ -37,7 +37,7 @@ npm install
 Iniciar servidor local:
 
 ```
-npm run
+npm start
 ```
 
 Backend:
