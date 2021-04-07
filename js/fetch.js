@@ -26,8 +26,8 @@ fetch('https://bsale-test-backend.herokuapp.com/api/categories')
         productosAux= data;
         flag=false;
         listarProductos(productos)
-      });
-  });
+      }).catch(error => console.error(error));
+  }).catch(error => console.error(error));
 
 function listarProducto(product){
   let container = document.querySelector('.container');
@@ -139,7 +139,7 @@ function mostrarCategoria(indice){
       }
       else
         listarProductos(productos);
-    });
+    }).catch(error => console.error(error));
 }
 
 function ordenar(numeroOrden){
@@ -158,7 +158,7 @@ function ordenar(numeroOrden){
         }
         else
           listarProductos(productos);
-      });
+      }).catch(error => console.error(error));
   }
   else{
     var auxText="";
@@ -174,7 +174,7 @@ function ordenar(numeroOrden){
         }
         else
           listarProductos(productos);
-      });
+      }).catch(error => console.error(error));
   }
 }
 
