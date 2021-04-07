@@ -88,8 +88,24 @@
   </nav>
   <!-- Navbar -->
 
-  <div class="py-5">
+  <div class="py-2">
+    <div class="row col-lg-8 col-md-12 col-sm-12 mx-auto px-5">
+      <div class="col-6 px-0 ml-auto">
+        <select class="form-control custom-select  mt-15" id="orden">
+          <option id="ordenar1" selected="0" value="0">Categorias ↑</option>
+          <option id="ordenar2" value="1">Categorias ↓</option>
+          <option id="ordenar3" value="2">Precio ↑</option>
+          <option id="ordenar4" value="3">Precio ↓</option>
+        </select>
+      </div>
+      <div class="col-6 px-0 ml-auto">
+        <select class="form-control custom-select mt-15" id="filtroCategorias">
+          <option selected="" value="0">Todas las categorías</option>
+        </select>
+      </div>
+    </div>
     <div class="row container mx-auto" id="contenedor">
+
       <script type="text/javascript" src="js/fetch.js"></script>
     </div>
   </div>
