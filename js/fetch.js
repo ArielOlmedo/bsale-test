@@ -100,8 +100,8 @@ input.addEventListener("keydown",function (event) {
   }
 });
 
-document.getElementById("orden").onclick=function(){ordenar(document.getElementById("orden").value)};
-document.getElementById("filtroCategorias").onclick=function(){mostrarCategoria(document.getElementById("filtroCategorias").value)};
+document.getElementById("orden").onchange=function(){ordenar(document.getElementById("orden").value)};
+document.getElementById("filtroCategorias").onchange=function(){mostrarCategoria(document.getElementById("filtroCategorias").value)};
 document.getElementById("busqueda").onclick=function(){imprimir()};
 
 function imprimir(){
