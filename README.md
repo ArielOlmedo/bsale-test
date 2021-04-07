@@ -1,2 +1,2 @@
-# bsale-test
--
+# Test-Bsale
+En el siguiente documento se presenta un sistema web planteado por la empresa Bsale, el cual busca determinar si las aptitudes del postulante son adecuadas para la oferta laboral que se está entregando. En este informe se procederá a detallar una explicación a como fue abordado el problema y como fue luego construido. El documento explicará también características técnicas de la solución y como fueron utilizadas las herramientas de desarrollo en esta.
