@@ -57,11 +57,6 @@ php artisan serve
 
 Demostracion del sistema en: https://arielolmedo.github.io/bsale-test/
 
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-
 ## Construido con 🛠️
 
 
