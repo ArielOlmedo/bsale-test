@@ -54,7 +54,7 @@
       <workItem from="1617736234851" duration="41231000" />
       <workItem from="1617794409084" duration="3910000" />
       <workItem from="1617829916984" duration="1406000" />
-      <workItem from="1617834133982" duration="1145000" />
+      <workItem from="1617834133982" duration="1481000" />
     </task>
     <task id="LOCAL-00001" summary="buscador resposive">
       <created>1617740562037</created>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617830957510</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Anadido buscador por nombre">
+      <created>1617835399616</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617835399616</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,13 +136,14 @@
     <MESSAGE value="añadido delay para fetchs" />
     <MESSAGE value="algunos comentarios eliminados" />
     <MESSAGE value="corregido error en filtros para navegador Safari" />
-    <option name="LAST_COMMIT_MESSAGE" value="corregido error en filtros para navegador Safari" />
+    <MESSAGE value="Anadido buscador por nombre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Anadido buscador por nombre" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1617830956209">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1617835399136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617830956209" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617835399136" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1617498733700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -144,10 +152,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617736334238" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1617830958827">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1617835401039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617830958827" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617835401039" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1617796635040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
