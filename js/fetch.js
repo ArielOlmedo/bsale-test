@@ -79,7 +79,6 @@ function imprimir(){
         });
   }
 }
-
 function mostrarCategoria(indice){
   indicador=indice;
   var auxText="";
