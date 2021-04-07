@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="40978e28-ec6a-43e5-80d5-52e428f95c5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/fetch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fetch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
       <workItem from="1617579141994" duration="608000" />
       <workItem from="1617618040023" duration="614000" />
       <workItem from="1617649694148" duration="34816000" />
-      <workItem from="1617736234851" duration="24069000" />
+      <workItem from="1617736234851" duration="33524000" />
     </task>
     <task id="LOCAL-00001" summary="buscador resposive">
       <created>1617740562037</created>
@@ -68,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617742345931</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ordenar por, añadido&#10;Filtros por categoria añadido">
+      <created>1617770557113</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617770557113</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,13 +86,14 @@
     </ignored-roots>
     <MESSAGE value="buscador resposive" />
     <MESSAGE value="condicion de producto no encontrado" />
-    <option name="LAST_COMMIT_MESSAGE" value="condicion de producto no encontrado" />
+    <MESSAGE value="Ordenar por, añadido&#10;Filtros por categoria añadido" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ordenar por, añadido&#10;Filtros por categoria añadido" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1617742345496">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1617770556626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617742345496" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617770556626" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1617498733700">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -95,10 +102,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617736334238" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1617742347410">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1617770560061">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617742347410" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617770560061" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1617520934175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

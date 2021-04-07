@@ -7,6 +7,7 @@ var categorias = [];
 var flag=true;
 var auxhtml="<option selected=\"\" value=\"0\">Todas las categorías</option>";
 var orden=0;
+var indicador=0;
 
 var imagenAux='https://yt3.ggpht.com/ytc/AAUvwniGM4s1DvFyu58nzhOfCw_z9m-jtBjJk8a1b95V=s900-c-k-c0x00ffffff-no-rj';
 
@@ -16,7 +17,6 @@ fetch('https://bsale-test-backend.herokuapp.com/api/categories')
     categorias = data;
     categorias.map((category,j)=>{
       auxhtml=auxhtml+"<option class='text-capitalize' value=\""+category.id+"\">"+category.name+"</option>\n";
-
     });
     document.getElementById('filtroCategorias').innerHTML= auxhtml;
   });
@@ -35,16 +35,28 @@ if(flag){
 
 var input=document.getElementById("search");
 input.addEventListener("keydown",function (event) {
-  if(event.key==='Enter'){
+  if((event.which<=90)&&(event.which>=48)){
+    event.preventDefault();
+    document.getElementById('search').value=document.getElementById('search').value+event.key;
+    document.getElementById("busqueda").click();
+    imprimir();
+  }
+  if(event.which===8){
+    if(textSearch!=""){
+      document.getElementById('search').value=textSearch.substring(0, textSearch.length - 1);
+    }
     event.preventDefault();
     document.getElementById("busqueda").click();
     imprimir();
+  }
+  if(event.which===13){
+    event.preventDefault();
+    document.getElementById("busqueda").click();
   }
 });
 
 document.getElementById("orden").onclick=function(){ordenar(document.getElementById("orden").value)};
 document.getElementById("filtroCategorias").onclick=function(){mostrarCategoria(document.getElementById("filtroCategorias").value)};
-
 document.getElementById("busqueda").onclick=function(){imprimir()};
 
 function imprimir(){
@@ -69,7 +81,11 @@ function imprimir(){
 }
 
 function mostrarCategoria(indice){
-  fetch('https://bsale-test-backend.herokuapp.com/api/products/categories/'+indice)
+  indicador=indice;
+  var auxText="";
+  if(textSearch!="")
+    auxText="/"+textSearch;
+  fetch('https://bsale-test-backend.herokuapp.com/api/products/search/'+orden+'/categories/'+indicador+auxText)
     .then(data=>data.json())
     .then(data=>{
       productos = data;
@@ -84,17 +100,38 @@ function mostrarCategoria(indice){
 
 function ordenar(numeroOrden){
   orden=numeroOrden;
-  fetch('https://bsale-test-backend.herokuapp.com/api/products/search/'+orden)
-    .then(data=>data.json())
-    .then(data=>{
-      productos = data;
-      document.getElementById('contenedor').innerHTML=" ";
-      if(!productos[0]){
-        document.getElementById('contenedor').innerHTML="<h2>Producto no encontrado</h2>";
-      }
-      else
-        listarProductos(productos);
-    });
+  if(numeroOrden==0){
+    var auxText="";
+    if(textSearch!="")
+      auxText="/"+textSearch;
+    fetch('https://bsale-test-backend.herokuapp.com/api/products/search/'+orden+auxText)
+      .then(data=>data.json())
+      .then(data=>{
+        productos = data;
+        document.getElementById('contenedor').innerHTML=" ";
+        if(!productos[0]){
+          document.getElementById('contenedor').innerHTML="<h2>Producto no encontrado</h2>";
+        }
+        else
+          listarProductos(productos);
+      });
+  }
+  else{
+    var auxText="";
+    if(textSearch!="")
+      auxText="/"+textSearch;
+    fetch('https://bsale-test-backend.herokuapp.com/api/products/search/'+orden+"/categories/"+indicador+auxText)
+      .then(data=>data.json())
+      .then(data=>{
+        productos = data;
+        document.getElementById('contenedor').innerHTML=" ";
+        if(!productos[0]){
+          document.getElementById('contenedor').innerHTML="<h2>Producto no encontrado</h2>";
+        }
+        else
+          listarProductos(productos);
+      });
+  }
 }
 
 function listarProductos(productos) {
