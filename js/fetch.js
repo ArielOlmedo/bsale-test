@@ -19,18 +19,63 @@ fetch('https://bsale-test-backend.herokuapp.com/api/categories')
       auxhtml=auxhtml+"<option class='text-capitalize' value=\""+category.id+"\">"+category.name+"</option>\n";
     });
     document.getElementById('filtroCategorias').innerHTML= auxhtml;
+    fetch('https://bsale-test-backend.herokuapp.com/api/products')
+      .then(data=>data.json())
+      .then(data=>{
+        productos = data;
+        productosAux= data;
+        flag=false;
+        listarProductos(productos)
+      });
   });
 
+function listarProducto(product){
+  let container = document.querySelector('.container');
+  let card=document.createElement("div");
+  card.className="col-lg-3 col-sm-4 col-xs-12 py-2";
+  var auxiliar = "<div class=\"card w-260p w-sm-290p\">\n" ;
+  if(!product.url_image){
+    auxiliar=auxiliar+"<img class=\"card-img-top\" style=\"height: 300px;\" src="+imagenAux+" alt=\"Card image cap\"/>\n" +
+      "        <div class=\"card-body row\" style=\"height: 150px;\">\n" +
+      "        <div class=\"col-9\">\n" +
+      "        <h5 class=\"card-title text-uppercase\">"+ product.name +"</h5>\n" ;
+  }
+  else{
+    auxiliar=auxiliar+"<img class=\"card-img-top\" style=\"height: 300px;\" src="+product.url_image+" alt=\"Card image cap\"/>\n" +
+      "        <div class=\"card-body row\" style=\"height: 150px;\">\n" +
+      "        <div class=\"col-9\">\n" +
+      "        <h5 class=\"card-title text-uppercase\">"+ product.name +"</h5>\n" ;
 
-if(flag){
-  fetch('https://bsale-test-backend.herokuapp.com/api/products')
-    .then(data=>data.json())
-    .then(data=>{
-      productos = data;
-      productosAux= data;
-      flag=false;
-      listarProductos(productos)
-    });
+  }
+  if(product.discount===0){
+    card.innerHTML=auxiliar+"<h6 class=\"card-subtitle mb-2 text-muted\">$"+product.price+"</h6>\n" +
+      "      </div>\n" +
+      "      <a style=\"color: #55acee;font-size: 25px;\" href=\"#!\" role=\"button\" class=\"col-2\"\n" +
+      "        ><i class=\"fas fa-cart-arrow-down fa-lg\"></i\n" +
+      "        ></a>\n" +
+      "        </div>\n" +
+      "        <ul class=\"list-group list-group-flush btn-group-vertical\">\n" +
+      "        <a class=\"col-12 text-black m-2 text-center text-capitalize\">"+ categorias[product.category-1].name +"</a>\n" +
+      "      </ul>\n" +
+      "      </div>\n" +
+      "      </div>";
+  }
+  else{
+    var digito=0;
+    digito=product.price-(product.price*(product.discount*0.01));
+    card.innerHTML=auxiliar+"<h6 class=\"card-subtitle mb-2 text-muted\">$"+Number.parseInt(digito)+"</h6>\n" +
+      "      </div>\n" +
+      "      <a style=\"color: #55acee;font-size: 25px;\" href=\"#!\" role=\"button\" class=\"col-2\"\n" +
+      "        ><i class=\"fas fa-cart-arrow-down fa-lg\"></i\n" +
+      "        ></a>\n" +
+      "        </div>\n" +
+      "        <ul class=\"list-group list-group-flush btn-group-vertical\">\n" +
+      "        <a class=\"col-12 text-black m-2 text-center text-capitalize\">"+ categorias[product.category-1].name +"</a>\n" +
+      "      </ul>\n" +
+      "      </div>\n" +
+      "      </div>";
+  }
+  container.appendChild(card);
 }
 
 var input=document.getElementById("search");
@@ -139,51 +184,4 @@ function listarProductos(productos) {
   });
 }
 
-function listarProducto(product){
-  let container = document.querySelector('.container');
-  let card=document.createElement("div");
-  card.className="col-lg-3 col-sm-4 col-xs-12 py-2";
-    var auxiliar = "<div class=\"card w-260p w-sm-290p\">\n" ;
-    if(!product.url_image){
-      auxiliar=auxiliar+"<img class=\"card-img-top\" style=\"height: 300px;\" src="+imagenAux+" alt=\"Card image cap\"/>\n" +
-        "        <div class=\"card-body row\" style=\"height: 150px;\">\n" +
-        "        <div class=\"col-9\">\n" +
-        "        <h5 class=\"card-title text-uppercase\">"+ product.name +"</h5>\n" ;
-    }
-    else{
-      auxiliar=auxiliar+"<img class=\"card-img-top\" style=\"height: 300px;\" src="+product.url_image+" alt=\"Card image cap\"/>\n" +
-        "        <div class=\"card-body row\" style=\"height: 150px;\">\n" +
-        "        <div class=\"col-9\">\n" +
-        "        <h5 class=\"card-title text-uppercase\">"+ product.name +"</h5>\n" ;
 
-    }
-    if(product.discount===0){
-      card.innerHTML=auxiliar+"<h6 class=\"card-subtitle mb-2 text-muted\">$"+product.price+"</h6>\n" +
-        "      </div>\n" +
-        "      <a style=\"color: #55acee;font-size: 25px;\" href=\"#!\" role=\"button\" class=\"col-2\"\n" +
-        "        ><i class=\"fas fa-cart-arrow-down fa-lg\"></i\n" +
-        "        ></a>\n" +
-        "        </div>\n" +
-        "        <ul class=\"list-group list-group-flush btn-group-vertical\">\n" +
-        "        <a class=\"col-12 text-black m-2 text-center text-capitalize\">"+ categorias[product.category-1].name +"</a>\n" +
-        "      </ul>\n" +
-        "      </div>\n" +
-        "      </div>";
-    }
-    else{
-      var digito=0;
-       digito=product.price-(product.price*(product.discount*0.01));
-      card.innerHTML=auxiliar+"<h6 class=\"card-subtitle mb-2 text-muted\">$"+Number.parseInt(digito)+"</h6>\n" +
-      "      </div>\n" +
-      "      <a style=\"color: #55acee;font-size: 25px;\" href=\"#!\" role=\"button\" class=\"col-2\"\n" +
-      "        ><i class=\"fas fa-cart-arrow-down fa-lg\"></i\n" +
-      "        ></a>\n" +
-      "        </div>\n" +
-      "        <ul class=\"list-group list-group-flush btn-group-vertical\">\n" +
-      "        <a class=\"col-12 text-black m-2 text-center text-capitalize\">"+ categorias[product.category-1].name +"</a>\n" +
-      "      </ul>\n" +
-      "      </div>\n" +
-      "      </div>";
-    }
-  container.appendChild(card);
-}
