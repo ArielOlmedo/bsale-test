@@ -80,20 +80,6 @@ function listarProducto(product){
 
 var input=document.getElementById("search");
 input.addEventListener("keydown",function (event) {
-  if((event.which<=90)&&(event.which>=48)){
-    event.preventDefault();
-    document.getElementById('search').value=document.getElementById('search').value+event.key;
-    document.getElementById("busqueda").click();
-    imprimir();
-  }
-  if(event.which===8){
-    if(textSearch!=""){
-      document.getElementById('search').value=textSearch.substring(0, textSearch.length - 1);
-    }
-    event.preventDefault();
-    document.getElementById("busqueda").click();
-    imprimir();
-  }
   if(event.which===13){
     event.preventDefault();
     document.getElementById("busqueda").click();
@@ -117,7 +103,7 @@ function imprimir(){
           productos = data;
           document.getElementById('contenedor').innerHTML=" ";
           if(!productos[0]){
-            document.getElementById('contenedor').innerHTML="<h2>Producto no encontrado</h2>";
+            document.getElementById('contenedor').innerHTML="<h2 class=\"text-center my-5\" style=\"height: 500px;\">Producto no encontrado</h2>";
           }
           else
             listarProductos(productos);
@@ -134,8 +120,8 @@ function mostrarCategoria(indice){
     .then(data=>{
       productos = data;
       document.getElementById('contenedor').innerHTML=" ";
-      if(!productos){
-        document.getElementById('contenedor').innerHTML="<h2>Producto no encontrado</h2>";
+      if(!productos[0]){
+        document.getElementById('contenedor').innerHTML="<h2 class=\"text-center\" style=\"height: 300px;\">Producto no encontrado</h2>";
       }
       else
         listarProductos(productos);
@@ -154,7 +140,7 @@ function ordenar(numeroOrden){
         productos = data;
         document.getElementById('contenedor').innerHTML=" ";
         if(!productos[0]){
-          document.getElementById('contenedor').innerHTML="<h2>Producto no encontrado</h2>";
+          document.getElementById('contenedor').innerHTML="<h2 class=\"text-center\" style=\"height: 300px;\">Producto no encontrado</h2>";
         }
         else
           listarProductos(productos);
@@ -170,7 +156,7 @@ function ordenar(numeroOrden){
         productos = data;
         document.getElementById('contenedor').innerHTML=" ";
         if(!productos[0]){
-          document.getElementById('contenedor').innerHTML="<h2>Producto no encontrado</h2>";
+          document.getElementById('contenedor').innerHTML="<h2 class=\"text-center\" style=\"height: 300px;\">Producto no encontrado</h2>";
         }
         else
           listarProductos(productos);
