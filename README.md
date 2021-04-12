@@ -26,8 +26,6 @@ Instalar Nodejs: https://nodejs.org/
 
 ### Instalación 🔧
 
-FrontEnd:
-
 Instalar Dependencias
 
 ```
