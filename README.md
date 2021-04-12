@@ -4,25 +4,25 @@ En el siguiente repo se presenta un sistema web planteado por la empresa Bsale, 
 
 La arquitectura utilizada para la solución de este problema será un MVC (Modelo-Vista-Controlador).Para realizar el desarrollo de esta web se ha desarrollado el controlador y la vista, las cuales corresponden al BackEnd y FrontEnd respectivamente, el modelo ya viene dado en el test. Dentro de las herramientas disponibles para el desarrollo del este tipo de software se encuentran distintos frameworks para el manejo de la Api rest, pero se ha decidido utilizar laravel 8. Igualmente para las vistas se utilizó la plantilla de “HTML 5 Boilerplate” junto con la librería Bootstrap para CSS, sin ningún framework en particular.
 
+Demo: https://arielolmedo.github.io/bsale-test/
+
+Repositorio Front-End del proyecto:https://github.com/ArielOlmedo/bsale-test
+
+Repositorio Back-End del proyecto:https://github.com/ArielOlmedo/bsale-test-back
+
+
 ## Comenzando 🚀
 
-Para desplegar el proyecto, se debe clonar tanto el FrontEnd como Backend en caso de querer ejecutar de manera local.
+Para desplegar el Front-End, se debe clonar el repositorio en caso de querer ejecutar de manera local (En caso de desear desplegar Back-end dirigirse a su documentacion [aquí.](https://github.com/ArielOlmedo/bsale-test-back)).
 
-Front:
-https://github.com/ArielOlmedo/bsale-test.git
-
-BackEnd:
-https://git.heroku.com/bsale-test-backend.git
-
+Clonar Front-End:
+```
+$ git clone https://github.com/ArielOlmedo/bsale-test.git
+```
 
 ### Pre-requisitos 📋
 
-Instalar composer: https://getcomposer.org/
-
-Instalar Laravel
-```
-composer global require laravel/installer
-```
+Instalar Nodejs: https://nodejs.org/
 
 ### Instalación 🔧
 
@@ -40,25 +40,14 @@ Iniciar servidor local:
 npm start
 ```
 
-Backend:
-
-Iniciar servidor local:
-
-```
-php artisan serve
-```
-
-***IMPORTANTE***: SE DEBEN REEMPLAZAR LOS ENDPOINTS POR EL API LOCAL.
-
-Demostracion del sistema en: https://arielolmedo.github.io/bsale-test/
+***IMPORTANTE***: SI SE DESEA CORRER BACKEND DE MANERA LOCAL SE DEBEN REEMPLAZAR LOS ENDPOINTS DEL ARCHIVO "fetch.js" POR LOS DEL LOCALHOST.
 
 ## Construido con 🛠️
 
 
-
-* [Laravel 8.x](https://laravel.com/) - El framework Backend.
 * [Html5 Boilerplate](https://html5boilerplate.com/) - Plantilla web utilizada.
 * [Bootstrap](https://getbootstrap.com/) - Libreria CSS utilizada.
+* [Nodejs](https://nodejs.org/) - Entorno
 
 
 ## Autor ✒️
