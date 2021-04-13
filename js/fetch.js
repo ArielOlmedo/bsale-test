@@ -40,24 +40,32 @@ function listarProducto(product){                                   //funcion en
   card.className="col-lg-3 col-sm-4 col-xs-12 py-2";
   var auxiliar = "<div class=\"card w-260p w-sm-290p\">\n" ;
   if(!product.url_image){                                           //comprobar si no existe imagen e ingresar una por defecto
-    auxiliar=auxiliar+"<img class=\"card-img-top\" style=\"height: 300px;\" src="+imagenAux+" alt=\"Card image cap\"/>\n" +
-      "        <div class=\"card-body row\" style=\"height: 150px;\">\n" +
-      "        <div class=\"col-9\">\n" +
+    auxiliar=auxiliar+ "<div class=\"conten\">\n" +
+      "<img class=\"card-img-top\" style=\"height: 300px;\" src="+imagenAux+" alt=\"Card image cap\"/>\n" +
+      "<button type=\"button\" class=\"bottom-right btn btn-primary btn-lg btn-floating\">\n" +
+      "  <i class=\"fas fa-cart-arrow-down fa-lg\"></i>\n" +
+      "</button>\n" +
+      "</div>"+
+
+      "        <div class=\"card-body\" style=\"height: 150px;\">\n" +
+      "        <div class=\"col-12\">\n" +
       "        <h5 class=\"card-title text-uppercase\">"+ product.name +"</h5>\n" ;
   }
   else{
-    auxiliar=auxiliar+"<img class=\"card-img-top\" style=\"height: 300px;\" src="+product.url_image+" alt=\"Card image cap\"/>\n" +
-      "        <div class=\"card-body row\" style=\"height: 150px;\">\n" +
-      "        <div class=\"col-9\">\n" +
+    auxiliar=auxiliar+ "<div class=\"conten\">\n" +
+      "<img class=\"card-img-top\" style=\"height: 300px;\" src="+product.url_image+" alt=\"Card image cap\"/>\n" +
+      "<button type=\"button\" class=\"bottom-right btn btn-primary btn-lg btn-floating\">\n" +
+      "  <i class=\"fas fa-cart-arrow-down fa-lg\"></i>\n" +
+      "</button>\n" +
+      "</div>"+
+      "        <div class=\"card-body\" style=\"height: 150px;\">\n" +
+      "        <div class=\"col-12\">\n" +
       "        <h5 class=\"card-title text-uppercase\">"+ product.name +"</h5>\n" ;
 
   }
   if(product.discount===0){                                       //calcular precio de producto aplicando el descuento o no, en caso de existir
     card.innerHTML=auxiliar+"<h6 class=\"card-subtitle mb-2 text-muted\">$"+product.price+"</h6>\n" +
       "      </div>\n" +
-      "      <a style=\"color: #55acee;font-size: 25px;\" href=\"#!\" role=\"button\" class=\"col-2\"\n" +
-      "        ><i class=\"fas fa-cart-arrow-down fa-lg\"></i\n" +
-      "        ></a>\n" +
       "        </div>\n" +
       "        <ul class=\"list-group list-group-flush btn-group-vertical\">\n" +
       "        <a class=\"col-12 text-black m-2 text-center text-capitalize\">"+ categorias[product.category-1].name +"</a>\n" +
@@ -68,13 +76,12 @@ function listarProducto(product){                                   //funcion en
   else{
     var digito=0;
     digito=product.price-(product.price*(product.discount*0.01));
-    card.innerHTML=auxiliar+"<h6 class=\"card-subtitle mb-2 text-muted\">$"+Number.parseInt(digito)+"</h6>\n" +
+    card.innerHTML=auxiliar+"<h6 class=\"card-subtitle mb-2 text-muted\">$"+Number.parseInt(digito)+"" +
+      "<p class=\"m-0\" style=\"font-size:10px;\"><del>$"+ product.price +"</del></p></h6>\n" +
       "      </div>\n" +
-      "      <a style=\"color: #55acee;font-size: 25px;\" href=\"#!\" role=\"button\" class=\"col-2\"\n" +
-      "        ><i class=\"fas fa-cart-arrow-down fa-lg\"></i\n" +
-      "        ></a>\n" +
+      "<span class=\"badge rounded-pill bg-danger\" style=\"background-color:red !important;\">"+product.discount+"% de descuento</span>"+
       "        </div>\n" +
-      "        <ul class=\"list-group list-group-flush btn-group-vertical\">\n" +
+    "        <ul class=\"list-group list-group-flush btn-group-vertical\">\n" +
       "        <a class=\"col-12 text-black m-2 text-center text-capitalize\">"+ categorias[product.category-1].name +"</a>\n" +
       "      </ul>\n" +
       "      </div>\n" +
