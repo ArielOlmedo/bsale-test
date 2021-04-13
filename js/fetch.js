@@ -108,6 +108,11 @@ document.getElementById("busqueda").onclick=function(){imprimir()};      //llama
 
 
 function imprimir(){                                      //Funcion encargada de mostrar productos buscados segun nombre
+  var auxText="";
+  if(textSearch!=""){
+    auxText ="/"+document.getElementById("orden").value+parseInt(document.getElementById("asc-desc").value)+"/"+textSearch;
+  }
+
   var button=document.getElementById("busqueda".value);
   textSearch=search.value;
   if(textSearch===""){
@@ -158,23 +163,6 @@ function ordenar(numeroOrden){        //Funcion encargada de buscar productos y 
     document.getElementById("ordenarAD2").innerText="Descendentemente";
     document.getElementById("asc-desc").disabled=false;
     }
-  if(numeroOrden==0){
-    var auxText="";
-    if(textSearch!="")
-      auxText="/"+textSearch;
-    fetch('https://bsale-test-backend.herokuapp.com/api/products/search/'+orden+auxText)//solicitud a endpoint de busqueda segun orden establedico(por defecto orden 0)
-      .then(data=>data.json())
-      .then(data=>{
-        productos = data;
-        document.getElementById('contenedor').innerHTML=" ";
-        if(!productos[0]){
-          document.getElementById('contenedor').innerHTML="<h2 class=\"text-center\" style=\"height: 300px;\">Producto no encontrado</h2>";
-        }
-        else
-          listarProductos(productos);
-      }).catch(error => console.error(error));
-  }
-  else{
     var auxText="";
     if(textSearch!="")
       auxText="/"+textSearch;
@@ -189,7 +177,7 @@ function ordenar(numeroOrden){        //Funcion encargada de buscar productos y 
         else
           listarProductos(productos);
       }).catch(error => console.error(error));
-  }
+  //}
 }
 
 function listarProductos(productos) {       //lista los cards de productos en la pagina
