@@ -98,7 +98,7 @@ input.addEventListener("keydown",function (event) {     //generar busqueda al pr
   }
 });
 
-var input2=document.getElementById("ex1");
+var input2=document.getElementById("ex1");//buscar una categoria segun pill escogida
 input2.addEventListener("click",function (event) {
   var activeTab = $(".nav-pills").find(".active");
   var id = activeTab.attr('id');
@@ -119,7 +119,6 @@ function imprimir(){                                      //Funcion encargada de
   if(textSearch!=""){
     auxText ="/"+document.getElementById("orden").value+parseInt(document.getElementById("asc-desc").value)+"/"+textSearch;
   }
-
   var button=document.getElementById("busqueda".value);
   textSearch=search.value;
   if(textSearch===""){
