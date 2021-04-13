@@ -347,3 +347,8 @@ template {
 [hidden] {
   display: none;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff !important;
+  background-color: #009715 !important;
+}

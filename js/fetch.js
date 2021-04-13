@@ -5,7 +5,9 @@ var productos = [];
 var productosAux = [];
 var categorias = [];
 var flag=true;
-var auxhtml="<option selected=\"\" value=\"0\">Todas las categorías</option>";
+var auxhtml="<li class=\"nav-item\" role=\"presentation\">\n" +
+  "        <a class=\"nav-link active\" id=\"0\" data-mdb-toggle=\"pill\" role=\"tab\" href=\"#ex2-pills-2\" aria-controls=\"0\" aria-selected=\"true\">Todas las categorías</a>\n" +
+  "      </li>";
 var orden=0;
 var indicador=0;
 
@@ -16,9 +18,12 @@ fetch('https://bsale-test-backend.herokuapp.com/api/categories')              //
   .then(data=>{
     categorias = data;
     categorias.map((category,j)=>{
-      auxhtml=auxhtml+"<option class='text-capitalize' value=\""+category.id+"\">"+category.name+"</option>\n";
+      auxhtml=auxhtml+"<li class=\"nav-item\" role=\"presentation\">\n" +
+        "        <a class=\"nav-link\" id=\""+category.id+"\" data-mdb-toggle=\"pill\" href=\"#ex2-pills-2\" role=\"tab\" aria-controls=\""+category.id+"\" aria-selected=\"false\">"+category.name+"</a>\n" +
+        "      </li>";
+
     });
-    document.getElementById('filtroCategorias').innerHTML= auxhtml;
+    document.getElementById('ex1').innerHTML= auxhtml;
     fetch('https://bsale-test-backend.herokuapp.com/api/products')            //solicitud inicial de productos
       .then(data=>data.json())
       .then(data=>{
@@ -86,8 +91,14 @@ input.addEventListener("keydown",function (event) {     //generar busqueda al pr
   }
 });
 
+var input2=document.getElementById("ex1");
+input2.addEventListener("click",function (event) {
+  var activeTab = $(".nav-pills").find(".active");
+  var id = activeTab.attr('id');
+  mostrarCategoria(id);
+});
+
 document.getElementById("orden").onchange=function(){ordenar(document.getElementById("orden").value)};      //obtener parametro de orden actual
-document.getElementById("filtroCategorias").onchange=function(){mostrarCategoria(document.getElementById("filtroCategorias").value)}; //obtener parametro de filtro actual
 document.getElementById("busqueda").onclick=function(){imprimir()};      //llamar a busqueda al presionar en boton de busqueda
 
 function imprimir(){                                      //Funcion encargada de mostrar productos buscados segun nombre
@@ -97,17 +108,17 @@ function imprimir(){                                      //Funcion encargada de
     window.location.reload()
   }
   else{
-      fetch('https://bsale-test-backend.herokuapp.com/api/products/search/'+orden+'/'+textSearch)//solicitud a endpoint de busqueda de producto por su nombre
-        .then(data=>data.json())
-        .then(data=>{
-          productos = data;
-          document.getElementById('contenedor').innerHTML=" ";
-          if(!productos[0]){
-            document.getElementById('contenedor').innerHTML="<h2 class=\"text-center my-5\" style=\"height: 500px;\">Producto no encontrado</h2>";
-          }
-          else
-            listarProductos(productos);
-        });
+    fetch('https://bsale-test-backend.herokuapp.com/api/products/search/'+orden+'/'+textSearch)//solicitud a endpoint de busqueda de producto por su nombre
+      .then(data=>data.json())
+      .then(data=>{
+        productos = data;
+        document.getElementById('contenedor').innerHTML=" ";
+        if(!productos[0]){
+          document.getElementById('contenedor').innerHTML="<h2 class=\"text-center my-5\" style=\"height: 500px;\">Producto no encontrado</h2>";
+        }
+        else
+          listarProductos(productos);
+      });
   }
 }
 function mostrarCategoria(indice){    //Funcion encargada de filtrar productos buscados segun categoria
@@ -169,6 +180,7 @@ function listarProductos(productos) {       //lista los cards de productos en la
     listarProducto(product);
   });
 }
+
 
 
 
