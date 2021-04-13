@@ -46,6 +46,8 @@ npm start
 
 La solución ideada para este problema consta de una `barra de búsqueda`, filtros de `categorías`, un select para escoger el `parámetro de orden` de los productos(por defecto ordenado por categorías) y finalmente otro select el cual nos permite `ordenar ascendentemente o descendentemente` tanto alfabéticamente como por el precio de los productos.
 
+![alt_text](https://scontent.fkna1-1.fna.fbcdn.net/v/t1.15752-9/173644965_1352766241768776_3063658800215121989_n.png?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_ohc=bFLAJw27B5MAX95-mXX&_nc_ht=scontent.fkna1-1.fna&oh=a8bdffeb0ba8addd7b7508b85ca1b7be&oe=609AB05D)
+
 Estas búsquedas a su vez pueden ordenarse y filtrarse. Ejemplo si digito el numero 5 como búsqueda tendré distintos productos pertenecientes a distintas categorías, búsqueda la cual puedo ordenar por cualquiera de los parámetros y a la vez filtrar según la categoría de producto que busque.
 
 Para las vistas de los productos se han implementado las siguientes cards:
