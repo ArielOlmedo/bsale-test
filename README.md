@@ -37,7 +37,7 @@ Iniciar servidor local:
 ```
 npm start
 ```
-![alt text](https://drive.google.com/file/d/1y9CchJmAat_90B0xNR9FWhRD9SpAwJGU/view)
+![alt text](https://scontent.fkna1-1.fna.fbcdn.net/v/t1.15752-9/173560805_482963779736387_4085036035887684951_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_ohc=16vHIc5o52UAX_Zr3U7&_nc_ht=scontent.fkna1-1.fna&oh=11aac4e758e13853a1dc78ec468c139f&oe=609BA470)
 
 
 ***IMPORTANTE***: SI SE DESEA CORRER BACKEND DE MANERA LOCAL SE DEBEN REEMPLAZAR LOS ENDPOINTS DEL ARCHIVO "fetch.js" POR LOS DEL LOCALHOST.
