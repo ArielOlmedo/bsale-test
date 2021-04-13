@@ -54,12 +54,12 @@ Para las vistas de los productos se han implementado las siguientes cards:
 
 Dónde:
 
-1º Corresponde a la `imagen` establecida del producto, en caso de encontrarse un parámetro vacío, se usara una imagen por defecto.
-2º Corresponde al `nombre de producto`.
-3º Corresponde al `precio del producto con descuento añadido` en caso de poseer descuento, en el caso contrario, solo se da el `precio` dado por la base de datos.
-4º Corresponde al `precio sin descuento añadido ‘en caso de poseer descuento, en el caso contrario este parámetro no existe.
-5º Corresponde al `porcentaje a descontar `al precio original del producto, en caso de no existir esto no se muestra en el card.
-6º Corresponde a la `categoría` del producto mostrado en el card.
+1º Corresponde a la `imagen` establecida del producto, en caso de encontrarse un parámetro vacío, se usara una imagen por defecto.<br><br/>
+2º Corresponde al `nombre de producto`.<br><br/>
+3º Corresponde al `precio del producto con descuento añadido` en caso de poseer descuento, en el caso contrario, solo se da el `precio` dado por la base de datos.<br><br/>
+4º Corresponde al `precio sin descuento añadido`en caso de poseer descuento, en el caso contrario este parámetro no existe.<br><br/>
+5º Corresponde al `porcentaje a descontar `al precio original del producto, en caso de no existir esto no se muestra en el card.<br><br/>
+6º Corresponde a la `categoría` del producto mostrado en el card.<br><br/>
 
 
 ## Construido con 🛠️
