@@ -98,7 +98,7 @@ input2.addEventListener("click",function (event) {
   mostrarCategoria(id);
 });
 
-
+document.getElementById("ordenarAD1").innerText="-";
 document.getElementById("asc-desc").disabled=true;
 document.getElementById("orden").onchange=function(){ordenar(parseInt(document.getElementById("orden").value)+parseInt(document.getElementById("asc-desc").value))};      //obtener parametro de orden actual
 document.getElementById("asc-desc").onchange=function(){ordenar(parseInt(document.getElementById("orden").value)+parseInt(document.getElementById("asc-desc").value))};      //obtener parametro de orden actual
@@ -147,10 +147,17 @@ function mostrarCategoria(indice){    //Funcion encargada de filtrar productos b
 
 function ordenar(numeroOrden){        //Funcion encargada de buscar productos y ordenarlos
   orden=numeroOrden;
-  if(orden===0)
+  if(orden===0||orden===1){
+    orden=0;
+    document.getElementById("ordenarAD1").innerText="-";
+    document.getElementById("ordenarAD2").innerText="-";
     document.getElementById("asc-desc").disabled=true;
-  else
+  }
+  else{
+    document.getElementById("ordenarAD1").innerText="Ascendentemente";
+    document.getElementById("ordenarAD2").innerText="Descendentemente";
     document.getElementById("asc-desc").disabled=false;
+    }
   if(numeroOrden==0){
     var auxText="";
     if(textSearch!="")
