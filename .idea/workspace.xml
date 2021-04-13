@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="40978e28-ec6a-43e5-80d5-52e428f95c5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/normalize.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/fetch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/fetch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +63,7 @@
       <workItem from="1618088222607" duration="43000" />
       <workItem from="1618195330181" duration="648000" />
       <workItem from="1618222035264" duration="4158000" />
-      <workItem from="1618261913731" duration="21135000" />
+      <workItem from="1618261913731" duration="25224000" />
     </task>
     <task id="LOCAL-00001" summary="buscador resposive">
       <created>1617740562037</created>
@@ -152,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618225743741</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="seleccion de categoria cambiado">
+      <created>1618284257066</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1618284257066</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,13 +176,14 @@
     <MESSAGE value="Anadido buscador por nombre" />
     <MESSAGE value="fix ordenar" />
     <MESSAGE value="comentarios anadidos" />
-    <option name="LAST_COMMIT_MESSAGE" value="comentarios anadidos" />
+    <MESSAGE value="seleccion de categoria cambiado" />
+    <option name="LAST_COMMIT_MESSAGE" value="seleccion de categoria cambiado" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1618225743273">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1618284251482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1618225743273" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1618284251482" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1618088259726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -203,10 +208,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1617736334238" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1618225746436">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1618284258938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1618225746436" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.-1080.1920.1040@0.0.1920.1040" timestamp="1618284258938" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1617796635040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

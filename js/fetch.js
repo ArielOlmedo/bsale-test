@@ -98,8 +98,14 @@ input2.addEventListener("click",function (event) {
   mostrarCategoria(id);
 });
 
-document.getElementById("orden").onchange=function(){ordenar(document.getElementById("orden").value)};      //obtener parametro de orden actual
+
+document.getElementById("asc-desc").disabled=true;
+document.getElementById("orden").onchange=function(){ordenar(parseInt(document.getElementById("orden").value)+parseInt(document.getElementById("asc-desc").value))};      //obtener parametro de orden actual
+document.getElementById("asc-desc").onchange=function(){ordenar(parseInt(document.getElementById("orden").value)+parseInt(document.getElementById("asc-desc").value))};      //obtener parametro de orden actual
 document.getElementById("busqueda").onclick=function(){imprimir()};      //llamar a busqueda al presionar en boton de busqueda
+
+
+
 
 function imprimir(){                                      //Funcion encargada de mostrar productos buscados segun nombre
   var button=document.getElementById("busqueda".value);
@@ -141,6 +147,10 @@ function mostrarCategoria(indice){    //Funcion encargada de filtrar productos b
 
 function ordenar(numeroOrden){        //Funcion encargada de buscar productos y ordenarlos
   orden=numeroOrden;
+  if(orden===0)
+    document.getElementById("asc-desc").disabled=true;
+  else
+    document.getElementById("asc-desc").disabled=false;
   if(numeroOrden==0){
     var auxText="";
     if(textSearch!="")

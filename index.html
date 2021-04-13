@@ -73,7 +73,7 @@
 
   <div class="mx-auto col-9">
     <!-- Pills navs -->
-    <ul class="nav nav-pills nav-fill mb-3" id="ex1" role="tablist">
+    <ul class="nav nav-pills nav-fill" id="ex1" role="tablist">
     </ul>
 
     <!-- Pills content -->
@@ -85,27 +85,24 @@
   </div>
 
 
-  <div class="py-2">
-    <div class="row col-lg-8 col-md-12 col-sm-12 mx-auto px-5">
-      <div class="col-6 px-0 ml-auto">
-        <select class="form-control custom-select  mt-15" id="orden">
-          <option id="ordenar1" selected="0" value="0">Ordenar por categorias</option>
-          <option id="ordenar3" value="2">Alfabéticamente ↑</option>
-          <option id="ordenar4" value="3">Alfabéticamente ↓</option>
-          <option id="ordenar5" value="4">Precio ↑</option>
-          <option id="ordenar6" value="5">Precio ↓</option>
-        </select>
-      </div>
-      <div class="col-6 px-0 ml-auto">
-        <select class="form-control custom-select mt-15" id="filtroCategorias">
-          <option selected="" value="0">Todas las categorías</option>
-        </select>
-      </div>
+  <div class="row col-lg-8 col-md-12 col-sm-12 mx-auto px-5">
+    <div class="col-6 px-0 ml-auto">
+      <select class="form-control custom-select mt-15" id="orden" >
+        <option id="ordenar1" selected="0" value="0">Orden por categorias</option>
+        <option id="ordenar3" value="2">Alfabéticamente</option>
+        <option id="ordenar5" value="4">Precio</option>
+      </select>
     </div>
-    <div class="row container mx-auto" id="contenedor">
+    <div class="col-6 px-0 ml-auto">
+      <select class="form-control custom-select mt-15" id="asc-desc">
+        <option selected="" value="0">Ascendentemente</option>
+        <option value="1">Descendentemente</option>
+      </select>
+    </div>
+  </div>
+  <div class="row container mx-auto" id="contenedor">
 
-      <script type="text/javascript" src="js/fetch.js"></script>
-    </div>
+    <script type="text/javascript" src="js/fetch.js"></script>
   </div>
 
   <footer class="bg-dark text-center text-white">
