@@ -8,6 +8,7 @@ var flag=true;
 var auxhtml="<li class=\"nav-item\" role=\"presentation\">\n" +
   "        <a class=\"nav-link active\" id=\"0\" data-mdb-toggle=\"pill\" role=\"tab\" href=\"#ex2-pills-2\" aria-controls=\"0\" aria-selected=\"true\">Todas las categorías</a>\n" +
   "      </li>";
+
 var orden=0;
 var indicador=0;
 
